@@ -1,0 +1,99 @@
+<svg viewBox="0 0 1200 820" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-family: 'Helvetica Neue', Arial, sans-serif; }
+    .wordmark { font-weight: 700; letter-spacing: -0.5px; }
+    .tagline { font-weight: 600; }
+    .label { font-size: 13px; fill: #6b6b6b; }
+    .panel-title { font-size: 12px; fill: #9a9a9a; letter-spacing: 1.5px; font-weight: 600; }
+  </style>
+
+  <defs>
+    <symbol id="icon-color" viewBox="0 0 100 100">
+      <line x1="4" y1="50" x2="52" y2="50" stroke="#0F2C59" stroke-width="4" stroke-linecap="round"/>
+      <line x1="10" y1="20" x2="52" y2="50" stroke="#0F2C59" stroke-width="2.4" stroke-linecap="round"/>
+      <line x1="10" y1="80" x2="52" y2="50" stroke="#0F2C59" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="4" cy="50" r="4" fill="#F8F0E5" stroke="#0F2C59" stroke-width="2"/>
+      <circle cx="10" cy="20" r="3.6" fill="#F8F0E5" stroke="#0F2C59" stroke-width="1.8"/>
+      <circle cx="10" cy="80" r="3.6" fill="#F8F0E5" stroke="#0F2C59" stroke-width="1.8"/>
+      <polygon points="52,50 60,63.9 76,63.9 84,50 76,36.1 60,36.1" fill="#0F2C59"/>
+      <line x1="60" y1="36.1" x2="76" y2="36.1" stroke="#DAC0A3" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-reversed" viewBox="0 0 100 100">
+      <line x1="4" y1="50" x2="52" y2="50" stroke="#F8F0E5" stroke-width="4" stroke-linecap="round"/>
+      <line x1="10" y1="20" x2="52" y2="50" stroke="#F8F0E5" stroke-width="2.4" stroke-linecap="round"/>
+      <line x1="10" y1="80" x2="52" y2="50" stroke="#F8F0E5" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="4" cy="50" r="4" fill="#0F2C59" stroke="#F8F0E5" stroke-width="2"/>
+      <circle cx="10" cy="20" r="3.6" fill="#0F2C59" stroke="#F8F0E5" stroke-width="1.8"/>
+      <circle cx="10" cy="80" r="3.6" fill="#0F2C59" stroke="#F8F0E5" stroke-width="1.8"/>
+      <polygon points="52,50 60,63.9 76,63.9 84,50 76,36.1 60,36.1" fill="#F8F0E5"/>
+      <line x1="60" y1="36.1" x2="76" y2="36.1" stroke="#DAC0A3" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-mono" viewBox="0 0 100 100">
+      <line x1="4" y1="50" x2="52" y2="50" stroke="#0F2C59" stroke-width="4" stroke-linecap="round"/>
+      <line x1="10" y1="20" x2="52" y2="50" stroke="#0F2C59" stroke-width="2.4" stroke-linecap="round"/>
+      <line x1="10" y1="80" x2="52" y2="50" stroke="#0F2C59" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="4" cy="50" r="4" fill="#ffffff" stroke="#0F2C59" stroke-width="2"/>
+      <circle cx="10" cy="20" r="3.6" fill="#ffffff" stroke="#0F2C59" stroke-width="1.8"/>
+      <circle cx="10" cy="80" r="3.6" fill="#ffffff" stroke="#0F2C59" stroke-width="1.8"/>
+      <polygon points="52,50 60,63.9 76,63.9 84,50 76,36.1 60,36.1" fill="#0F2C59"/>
+    </symbol>
+  </defs>
+
+  <!-- Panel A: Primary lockup, light background -->
+  <g>
+    <rect x="20" y="20" width="560" height="380" rx="8" fill="#F8F0E5"/>
+    <text x="40" y="48" class="panel-title">PRIMARY LOGO — LIGHT</text>
+    <use href="#icon-color" x="115" y="145" width="140" height="140"/>
+    <text x="275" y="228" class="wordmark" font-size="42" fill="#0F2C59">TitleNode</text>
+    <text x="275" y="255" class="tagline" font-size="10" letter-spacing="1.5" fill="#7A5C2E">THE INTELLIGENCE LAYER FOR LAND</text>
+  </g>
+
+  <!-- Panel B: Reversed lockup, dark background -->
+  <g>
+    <rect x="620" y="20" width="560" height="380" rx="8" fill="#0F2C59"/>
+    <text x="640" y="48" class="panel-title" fill="#8ea3c2">SECONDARY LOGO — REVERSED</text>
+    <use href="#icon-reversed" x="715" y="145" width="140" height="140"/>
+    <text x="875" y="228" class="wordmark" font-size="42" fill="#F8F0E5">TitleNode</text>
+    <text x="875" y="254" class="tagline" font-size="9" letter-spacing="2" fill="#DAC0A3">THE INTELLIGENCE LAYER FOR LAND</text>
+  </g>
+
+  <!-- Panel C: Icon system + small-size behavior -->
+  <g>
+    <rect x="20" y="420" width="560" height="380" rx="8" fill="#ffffff" stroke="#e5e0d5"/>
+    <text x="40" y="448" class="panel-title">ICON-ONLY MARK — SMALL-SIZE BEHAVIOR</text>
+    <use href="#icon-color" x="55" y="480" width="160" height="160"/>
+    <text x="60" y="668" class="label">Full form</text>
+
+    <rect x="270" y="490" width="90" height="90" rx="20" fill="#0F2C59"/>
+    <use href="#icon-reversed" x="288" y="508" width="54" height="54"/>
+    <text x="270" y="608" class="label">64px (app icon)</text>
+
+    <rect x="400" y="510" width="52" height="52" rx="12" fill="#0F2C59"/>
+    <use href="#icon-reversed" x="411" y="521" width="30" height="30"/>
+    <text x="400" y="590" class="label">32px</text>
+
+    <rect x="490" y="524" width="28" height="28" rx="7" fill="#0F2C59"/>
+    <line x1="497" y1="538" x2="510" y2="538" stroke="#F8F0E5" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="509,538 511.5,541 514,538 511.5,535" fill="#F8F0E5"/>
+    <text x="480" y="572" class="label">16px favicon</text>
+
+    <text x="40" y="740" class="label" font-size="12">Below ~28px, drop the two diagonal lines and both</text>
+    <text x="40" y="758" class="label" font-size="12">hollow circles — ship only the hexagon + a line stub</text>
+    <text x="40" y="776" class="label" font-size="12">as a dedicated favicon asset, not a shrunk full icon.</text>
+  </g>
+
+  <!-- Panel D: Monochrome + clear space -->
+  <g>
+    <rect x="620" y="420" width="560" height="380" rx="8" fill="#ffffff" stroke="#e5e0d5"/>
+    <text x="640" y="448" class="panel-title">MONOCHROME + CLEAR SPACE</text>
+    <rect x="700" y="500" width="380" height="170" fill="none" stroke="#c9c9c9" stroke-dasharray="4 4"/>
+    <use href="#icon-mono" x="745" y="550" width="90" height="90"/>
+    <text x="850" y="605" class="wordmark" font-size="32" fill="#0F2C59">TitleNode</text>
+    <text x="700" y="710" class="label" font-size="12">Dashed box = minimum clear space on all sides,</text>
+    <text x="700" y="728" class="label" font-size="12">equal to the hexagon's height</text>
+    <text x="700" y="758" class="label" font-size="12">Minimum size — full lockup: 90px · icon-only: 28px</text>
+    <text x="700" y="776" class="label" font-size="12">(16px using the reduced favicon form)</text>
+  </g>
+</svg>

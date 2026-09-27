@@ -1,0 +1,53 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: anyror_db_fresh
+    environment:
+      POSTGRES_USER: anyror_admin
+      POSTGRES_PASSWORD: supersecretpassword123
+      POSTGRES_DB: anyror_saas_db
+    ports:
+      - "5435:5432" # Exposed on host port 5435
+    volumes:
+      - anyror_fresh_pgdata:/var/lib/postgresql/data
+      - ./backend/seed_dump.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U anyror_admin -d anyror_saas_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: anyror_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://anyror_admin:supersecretpassword123@db:5432/anyror_saas_db
+      - HEADLESS=true
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+    volumes:
+      - ./backend/output:/app/output
+      - ./backend/storage:/app/storage
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: anyror_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+
+volumes:
+  anyror_fresh_pgdata:
